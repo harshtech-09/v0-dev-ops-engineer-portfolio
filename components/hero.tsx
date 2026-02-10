@@ -113,7 +113,7 @@ export function Hero() {
             <div className="mb-6 border-b border-primary/10 pb-4">
               <p className="font-mono text-xs text-muted-foreground">
                 <span className="text-primary/50">System:</span>{" "}
-                <span className="text-foreground">Your Name</span>
+                <span className="text-foreground">Harshad Kamble</span>
                 <span className="text-muted-foreground"> | </span>
                 <span className="text-accent">DevOps Engineer</span>
               </p>
@@ -160,7 +160,7 @@ export function Hero() {
                 <span className="text-accent">$</span> view --projects
               </a>
               <a
-                href="#"
+                href="https://github.com/harshtech-09"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-sm border border-border bg-secondary/50 px-5 py-2.5 font-mono text-xs text-muted-foreground transition-all hover:border-primary/20 hover:text-foreground"
