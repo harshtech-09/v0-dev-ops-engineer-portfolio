@@ -4,15 +4,15 @@ import { SectionHeader } from "./about";
 const connections = [
   {
     label: "Email",
-    value: "your.email@example.com",
-    href: "mailto:your.email@example.com",
+    value: "harshad29k@outlook.com",
+    href: "mailto:harshad29k@outlook.com",
     icon: Mail,
     protocol: "smtp://",
   },
   {
     label: "GitHub",
-    value: "github.com/yourusername",
-    href: "https://github.com",
+    value: "github.com/harshtech-09",
+    href: "https://github.com/harshtech-09",
     icon: Github,
     protocol: "https://",
   },
