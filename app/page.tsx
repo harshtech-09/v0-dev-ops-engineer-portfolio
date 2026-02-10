@@ -6,12 +6,14 @@ import { Projects } from "@/components/projects";
 import { Experience } from "@/components/experience";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
+import { MatrixRain } from "@/components/matrix-rain";
 
 export default function Home() {
   return (
-    <>
+    <div className="scanlines animate-flicker">
+      <MatrixRain />
       <Navbar />
-      <main>
+      <main className="relative z-10">
         <Hero />
         <About />
         <Skills />
@@ -20,6 +22,6 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

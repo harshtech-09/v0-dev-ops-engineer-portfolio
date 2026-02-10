@@ -1,59 +1,67 @@
 import { Mail, Github, Linkedin } from "lucide-react";
+import { SectionHeader } from "./about";
 
-const links = [
+const connections = [
   {
     label: "Email",
     value: "your.email@example.com",
     href: "mailto:your.email@example.com",
     icon: Mail,
+    protocol: "smtp://",
   },
   {
     label: "GitHub",
     value: "github.com/yourusername",
     href: "https://github.com",
     icon: Github,
+    protocol: "https://",
   },
   {
     label: "LinkedIn",
     value: "linkedin.com/in/yourusername",
     href: "https://linkedin.com",
     icon: Linkedin,
+    protocol: "https://",
   },
 ];
 
 export function Contact() {
   return (
-    <section id="contact" className="px-6 py-24">
-      <div className="mx-auto max-w-6xl">
-        <div className="mb-4 flex items-center gap-3">
-          <div className="h-px flex-1 bg-border" />
-          <h2 className="font-mono text-sm uppercase tracking-widest text-primary">
-            Contact
-          </h2>
-          <div className="h-px flex-1 bg-border" />
+    <section id="contact" className="px-6 py-28">
+      <div className="relative z-10 mx-auto max-w-4xl">
+        <SectionHeader label="Connect" />
+
+        {/* Connection prompt */}
+        <div className="mb-8 rounded-sm border border-primary/10 bg-card/40 px-4 py-3 backdrop-blur-sm border-glow">
+          <p className="font-mono text-xs text-muted-foreground">
+            <span className="text-accent">$</span> ssh -i ~/.ssh/id_ed25519
+            contact@devops-engineer
+          </p>
+          <p className="mt-1 font-mono text-xs text-primary/60">
+            Connection established. Available channels:
+          </p>
         </div>
 
-        <p className="mx-auto mb-16 max-w-2xl text-center text-base leading-relaxed text-muted-foreground">
-          Interested in working together or have a question? Reach out through
-          any of the channels below.
-        </p>
-
-        <div className="mx-auto grid max-w-2xl gap-4 sm:grid-cols-3">
-          {links.map((link) => (
+        <div className="grid gap-4 sm:grid-cols-3">
+          {connections.map((conn) => (
             <a
-              key={link.label}
-              href={link.href}
+              key={conn.label}
+              href={conn.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col items-center rounded-lg border border-border bg-card p-6 text-center transition-colors hover:border-primary/30"
+              className="group rounded-sm border border-primary/10 bg-card/40 p-5 backdrop-blur-sm transition-all hover:border-primary/30 hover:bg-card/60 border-glow-hover"
             >
-              <link.icon className="mb-3 h-5 w-5 text-primary" />
-              <span className="mb-1 text-sm font-medium text-foreground">
-                {link.label}
-              </span>
-              <span className="text-xs text-muted-foreground">
-                {link.value}
-              </span>
+              <div className="mb-3 flex items-center gap-2">
+                <conn.icon className="h-4 w-4 text-primary/50 transition-colors group-hover:text-primary" />
+                <span className="h-1.5 w-1.5 rounded-full bg-primary/40 animate-status-blink" />
+              </div>
+              <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wider text-foreground">
+                {conn.label}
+              </p>
+              <p className="font-mono text-[10px] text-muted-foreground">
+                <span className="text-accent/60">{conn.protocol}</span>
+                {conn.value}
+              </p>
             </a>
           ))}
         </div>
