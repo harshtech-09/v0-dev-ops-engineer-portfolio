@@ -4,7 +4,7 @@ import { SectionHeader } from "./about";
 const connections = [
   {
     label: "Email",
-    value: "harshad29k@outlook.com",
+    value: "",
     href: "mailto:",
     icon: Mail,
     protocol: "smtp://",
