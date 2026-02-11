@@ -5,7 +5,7 @@ const connections = [
   {
     label: "Email",
     value: "harshad29k@outlook.com",
-    href: "mailto:harshad29k@outlook.com",
+    href: "mailto:",
     icon: Mail,
     protocol: "smtp://",
   },
